@@ -102,7 +102,7 @@ a {
     background-color: rgba(231, 255, 233, 0.955);
     border-radius: 10% 7%;
     width: 450px;
-    height: 750px;
+    height: 790px;
     justify-content: center;
     margin-top: 20px;
 }
@@ -195,7 +195,7 @@ input::-webkit-inner-spin-button {
         background-color: rgba(231, 255, 233, 0.955);
         opacity: 95%;
         width: 400px;
-        height: 730px;
+        height: 790px;
         justify-content: center;
         margin: 0;
     }
@@ -256,7 +256,7 @@ input::-webkit-inner-spin-button {
         background-color: rgba(231, 255, 233, 0.955);
         opacity: 95%;
         width: 400px;
-        height: 730px;
+        height: 790px;
         justify-content: center;
     }
 
