@@ -27,7 +27,7 @@ body, ul, li, p {
 body {
     min-height: 100vh;
     max-width: 100vw;
-    background: url("../img/wallpaper-teste.jpg");
+    background: url("img/wallpaper-teste.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -160,7 +160,7 @@ input::-webkit-inner-spin-button {
     body {
         min-height: 100vh;
         max-width: 100vw;
-        background: url("../img/wallpaper2.jpg");
+        background: url("img/wallpaper2.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -210,7 +210,7 @@ input::-webkit-inner-spin-button {
     body {
         min-height: 100vh;
         max-width: 100vw;
-        background: url("../img/wallpaper3.jpg");
+        background: url("img/wallpaper3.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
     }   
@@ -269,7 +269,7 @@ input::-webkit-inner-spin-button {
     body {
         min-height: 100vh;
         max-width: 100vw;
-        background: url("../img/wallpaper4.jpg");
+        background: url("img/wallpaper4.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
     }   
