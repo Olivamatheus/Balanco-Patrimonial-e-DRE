@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor0: rgb(120, 209, 172);
+    --cor1: rgb(138, 254, 206);
+    --cor2: #325446;
+    --cor4: #378b4e;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    background: url("../img/wallpaper-teste.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    opacity: 75%;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+.line1 {
+    display: grid;
+    justify-content: center;
+    height: 500px;
+}
+
+.line2 {
+    display: grid;
+    justify-content: center;
+    height: 800px;
+}
+
+.line1h1 {
+    color: #fff7f5;
+    width: 600px;
+    height: 150px;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin: 40px 50px;
+}
+
+.line1 img {
+    margin-top: 80px;
+    width: 250px;
+    margin: auto;
+    opacity: 70%;
+}
+
+.table {
+    background-color: rgba(231, 255, 233, 0.955);
+    border-radius: 10% 7%;
+    width: 450px;
+    height: 750px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.headertab {
+    margin-top: 30px;
+}
+
+.headertab p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.6em;
+    text-align: justify;
+    margin: 15px;
+    padding-top: 5px;
+}
+
+.table1, .table2 {
+    margin: auto;
+}
+
+tr th {
+    font-size: 0.6em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-align: justify;
+}
+
+td p {
+    font-size: 0.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+}
+
+td input {
+    width: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.5em;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.result {
+    font-size: 0.6em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        min-height: 100vh;
+        max-width: 100vw;
+        background: url("../img/wallpaper2.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        min-height: 100vh;
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .line1h1 {
+        color: #fff7f5;
+        width: 400px;
+        font-size: 0.9rem;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .line1 {
+        display: block;
+        justify-content: center;
+        max-height: 170px;
+    }
+
+    .line1 img {
+        display: none;
+    }
+
+    .table {
+        background-color: rgba(231, 255, 233, 0.955);
+        opacity: 95%;
+        width: 400px;
+        height: 730px;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .table1, .table2 {
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 980px){
+    body {
+        min-height: 100vh;
+        max-width: 100vw;
+        background: url("../img/wallpaper3.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }   
+
+    main {
+        min-height: 100vh;
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        opacity: 90%;
+    }
+    .header img {
+        margin-left: 20px;
+    }
+    .menu li a {
+        margin-right: 15px;
+    }
+
+    .line1h1 h1 {
+        width: 400px;
+        color: #fff7f5;
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .line1 {
+        display: block;
+        justify-content: center;
+        max-height: 170px;
+    }
+    
+    .table {
+        background-color: rgba(231, 255, 233, 0.955);
+        opacity: 95%;
+        width: 400px;
+        height: 730px;
+        justify-content: center;
+    }
+
+    .table1, .table2 {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 690px){
+    body {
+        min-height: 100vh;
+        max-width: 100vw;
+        background: url("../img/wallpaper4.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }   
+
+    main {
+        min-height: 100vh;
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        opacity: 90%;
+    }
+    .header img {
+        margin-left: 20px;
+    }
+    .menu li a {
+        margin-right: 15px;
+    }
+
+    .line1h1 h1 {
+        width: 400px;
+        color: #fff7f5;
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .line1 {
+        display: block;
+        justify-content: center;
+        max-height: 170px;
+    }
+    
+    .table {
+        background-color: rgba(231, 255, 233, 0.955);
+        opacity: 95%;
+        width: 400px;
+        height: 730px;
+        justify-content: center;
+    }
+    
+    .table1, .table2 {
+        margin: auto;
+    }
+}

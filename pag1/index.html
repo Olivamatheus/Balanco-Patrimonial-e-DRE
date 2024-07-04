@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanço Patrimonial e DRE</title>
+    <link rel="shortcut icon" href="../img/balance icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../img/balance logo.png" alt="balanço logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Balanço</a></li>
+                <li><a href="/">DRE</a></li>
+                <li><a href="/">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="line1">
+            <div class="line1h1">
+                <h1>Balanço Patrimonial & Demonstração de Resultado do Exercício</h1>
+            </div>
+            <img src="../img/balance-icon.png" alt="simbrith">
+        </div>
+        <div class="line2">
+            <form class="table">
+                <div class="headertab">
+                    <p>Ferramenta para análise de balanço patrimonial, fornece informações importantes a serem consideradas na gestão de uma empresa: </p>
+                    <hr>
+                    <p>Preencha as informações conforme o Balanço Patrimonial da empresa: </p>
+                </div>
+                <table class="table1">
+                    <tbody>
+                        <tr>
+                            <td><p>Ano</p></td>
+                            <td><input type="number" name="" id="ano_in" onblur="anoCal(this)"></td>
+                        </tr>
+                        <tr>
+                            <th>Ativo</th><td></td><th>Passivo</th>
+                        </tr>
+                        <tr>
+                            <td><p>Caixas e Bancos</p></td>
+                            <td><input type="number" name="cxbank" id="cxbank" class="atv atvcirc"></td>
+                            <td><p>Contas a Pagar</p></td>
+                            <td><input type="number" name="" id="contapag" class="pass"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Contas a Receber</p></td>
+                            <td><input type="number" name="contreceb" id="contreceb" class="atv atvcirc"></td>
+                            <td><p>Empréstimos</p></td>
+                            <td><input type="number" name="" id="emp" class="pass"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Estoques</p></td>
+                            <td><input type="number" name="estq" id="estq" class="atv atvcirc"></td>
+                            <td><p>Outras Obrigações</p></td>
+                            <td><input type="number" name="" id="outobr" class="pass"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Outros Recebíveis</p></td>
+                            <td><input type="number" name="outreceb" id="outreceb" class="atv atvcirc"></td>
+                            <td><p>Passivo Total</p></td>
+                            <td><span id="resPass" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Ativo Circulante</p></td>
+                            <td><span id="resatvcirc" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Investimento</p></td>
+                            <td><input type="number" name="" id="invest" class="atv atvNaoCirc"></td>
+                            <td><p>Capital Social</p></td>
+                            <td><input type="number" name="" id="capsoc" onblur="calcReserv()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Imobilizado</p></td>
+                            <td><input type="number" name="" id="imobil" class="atv atvNaoCirc"></td>
+                            <td><p>Reservas</p></td>
+                            <td><span id="reserv" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Intangível</p></td>
+                            <td><input type="number" name="" id="intang" class="atv atvNaoCirc"></td>
+                            <td><p>Patrimônio Líquido</p></td>
+                            <td><span id="patLiq" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Ativo Não-Circulante</p></td>
+                            <td><span id="resAtvNaoCirc" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Total do Ativo</p></td>
+                            <td><span id="resTotAtv" class="result"></span></td>
+                            <td><p>Total do Passivo + PL</p></td>
+                            <td><span id="passEPl" class="result"></span></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <div class="headertab">
+                    <hr>
+                    <p>Informações da Demonstração do Resultado do Exercício da empresa: </p>
+                </div>
+                <table class="table2">
+                    <tbody>
+                        <tr>
+                            <td><p>Ano</p></td>
+                            <td><span id="ano_out"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Resultado do Exercício</th>
+                        </tr>
+                        <tr>
+                            <td><p>Vendas Brutas</p></td>
+                            <td><input type="number" name="vendbru" id="vendBru" onblur="lucroB()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>(-) Impostos e Descontos Concedidos</p></td>
+                            <td><input type="number" name="impdescon" id="impDescon" onblur="lucroB()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>(-) Custo das Vendas</p></td>
+                            <td><input type="number" name="custven" id="custVen" onblur="lucroB()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Lucro Bruto</p></td>
+                            <td><span id="lucroBruto" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>(-) Despesas Operacionais</p></td>
+                            <td><input type="number" name="desop" id="despOp" onblur="lucroP()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>(-) Despesas Financeiras</p></td>
+                            <td><input type="number" name="desfin" id="despFin" onblur="lucroP()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Lucro antes do IR e CS</p></td>
+                            <td><span id="lucroParc" class="result"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>(-) Despesa com IR e CS</p></td>
+                            <td><input type="number" name="desircs" id="despIrCs" onblur="lucroL()"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Lucro Líquido</p></td>
+                            <td><span id="lucroLiq" class="result"></span></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
