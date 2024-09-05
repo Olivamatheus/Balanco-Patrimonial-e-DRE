@@ -43,7 +43,7 @@ function calcAtvCirc(array) {
     for (let i = 0; i < array.length; i++) {
         resatvcirc += Number(array[i].value)
     }
-    document.getElementById('resatvcirc').textContent = resatvcirc;
+    document.getElementById('resatvcirc').textContent = resatvcirc.toLocaleString('pt-BR');
     
 }
 
@@ -87,7 +87,7 @@ function calcAtvNaoCirc(array) {
     for (let i = 0; i < array.length; i++) {
         resAtvNaoCirc += Number(array[i].value)
     }
-    document.getElementById('resAtvNaoCirc').textContent = resAtvNaoCirc;  
+    document.getElementById('resAtvNaoCirc').textContent = resAtvNaoCirc.toLocaleString('pt-BR');  
 }
 
 // Total do Ativo
@@ -122,7 +122,7 @@ function calcAtv(array) {
     for (let i = 0; i < array.length; i++) {
         resAtv += Number(array[i].value)
     }
-    document.getElementById('resTotAtv').textContent = resAtv; 
+    document.getElementById('resTotAtv').textContent = resAtv.toLocaleString('pt-BR'); 
 }
 
 // Total Passivo
@@ -157,7 +157,7 @@ function calcPass(array) {
     for (let i = 0; i < array.length; i++) {
         resPass += Number(array[i].value)
     }
-    document.getElementById('resPass').textContent = resPass; 
+    document.getElementById('resPass').textContent = resPass.toLocaleString('pt-BR'); 
     calcPassPl(array);
 }
 
@@ -167,11 +167,14 @@ function calcPl () {
     var atv = document.getElementById('resTotAtv').innerText;
     var psv = document.getElementById('resPass').innerText;
     var pl = 0;
+    atv = atv.replace('.','');
+    psv = psv.replace('.','');
+    
     if (atv !== "" || psv !== "") {
         pl = (atv - psv);
        
     }
-    document.getElementById('patLiq').textContent = pl;
+    document.getElementById('patLiq').textContent = pl.toLocaleString('pt-BR');
     calcPassPl(pl);
 }
 
@@ -179,26 +182,32 @@ function calcPl () {
 
 function calcReserv () {
     const inputCapSoc = document.getElementById('capsoc').value;
-    const outputPl = document.getElementById('patLiq').innerText;
+    let outputPl = document.getElementById('patLiq').innerText;
     var reserv = 0;
+    outputPl = outputPl.replace('.','');
 
     if (outputPl !== "" || inputCapSoc !== "") {
         reserv = outputPl - inputCapSoc;
     }
-    document.getElementById('reserv').textContent = reserv;
+    document.getElementById('reserv').textContent = reserv.toLocaleString('pt-BR');
 }
 
-// Total do passivo + PL // OBS: NaN
+// Total do passivo + PL 
 function calcPassPl () {
     var totPass = document.getElementById('resPass').innerText;
     var patLiq = document.getElementById('patLiq').innerText;
     var totPassPl = 0;
+    totPass = totPass.replace('.','');
 
+    
     if (totPass === "" || totPassPl === NaN) {
-        document.getElementById('passEPl').textContent = parseInt(patLiq);
+        document.getElementById('passEPl').textContent = patLiq.toLocaleString('pt-BR');
+        return true;
     } 
     totPassPl = parseInt(totPass) + parseInt(patLiq);
-    document.getElementById('passEPl').textContent = totPassPl;
+    console.log(totPass);
+    console.log(patLiq);
+    document.getElementById('passEPl').textContent = totPassPl.toLocaleString('pt-BR');
 }
 
 // Resultado do exercício
